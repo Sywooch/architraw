@@ -1,0 +1,123 @@
+#fp-nav.left
+  left: rem-calc(40)
+  height: 100%
+  top: 0
+  margin-top: 0 !important
+  counter-reset: my-sec-counter -1
+
+  ul
+    height: inherit
+    width: rem-calc(2)
+    background: #3f3f3f
+    transition: .5s background-color
+
+    li
+      margin: 0
+      width: rem-calc(2)
+
+      a
+        transition: .7s all
+
+        &:before
+          counter-increment: my-sec-counter
+          content: "0" counter(my-sec-counter)
+          position: absolute
+          top: 0
+          bottom: 0
+          right: rem-calc(-30)
+          margin: auto
+          height: rem-calc(1)
+          font-size: rem-calc(11)
+          color: #b7b7b7
+          transition: .7s all
+
+      &:nth-child(1)
+        a
+          &:before
+            right: rem-calc(15)
+
+      a.active
+        background: $theme-orange-color
+
+        &:before
+          right: rem-calc(15)
+          color: $theme-orange-color
+
+        span
+          height: rem-calc(4)
+          width: rem-calc(4)
+          margin: rem-calc(0 -2)
+          background: $theme-orange-color
+
+      span
+        top: 100%
+        background: #b7b7b7
+
+  #trigger-btn-menu
+    position: absolute
+    top: rem-calc(38)
+    width: rem-calc(50)
+    height: rem-calc(65)
+    margin-left: rem-calc(15)
+    background: url("../../img/sprite.png") no-repeat
+    background-position: rem-calc(5 -207)
+    cursor: pointer
+    transition: .7s all
+
+body.body-invert
+
+  #fp-nav.left
+
+    ul
+      background: #ebebeb
+
+#offcanvas-full-screen
+  z-index: 999 !important
+  +off-canvas-base($background: $offcanvas-full-screen-bg, $transition: 0.5s cubic-bezier(0.6,0.24,0.52,0.7))
+  background-size: cover
+  height: 100%
+  transform: translateY(-100%)
+
+  .offcanvas-full-screen__inner
+    height: 100%
+
+    .offcanvas-screen__content
+      height: 100%
+
+      & > .row
+        height: 100%
+
+        .align-self-middle
+          padding: rem-calc(0 70)
+
+    .offcanvas-full-screen__menu
+      list-style: none
+
+      li
+        margin-bottom: rem-calc(30)
+
+        a.link
+          color: #000
+          font-size: rem-calc(32)
+          text-transform: uppercase
+          font-weight: bold
+
+          &:hover
+            color: $theme-orange-color
+
+          &:before
+            counter-increment: my-sec-counter
+            content: "0" counter(my-sec-counter)
+            font-size: rem-calc(13)
+            vertical-align: super
+            font-weight: normal
+            padding-right: rem-calc(5)
+
+body.body-invert
+
+  #fp-nav.left
+
+    #trigger-btn-menu
+      filter: brightness(0)
+
+

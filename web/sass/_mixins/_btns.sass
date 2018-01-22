@@ -1,0 +1,23 @@
+@mixin custom-button($is_invert: true)
+  display: inline-block
+  font-size: rem-calc($default-font-size)
+  text-align: center
+  padding: rem-calc(20 0)
+  width: rem-calc(275)
+  border: 1px solid #fff
+  transition: .7s all
+  color: #fff
+  cursor: pointer
+  @if $is_invert == true
+    background: transparent
+    &:hover,&:focus
+      color: #fff
+      background: $theme-orange-color
+      border-color: $theme-orange-color
+  @else
+    background: $theme-orange-color
+    border-color: $theme-orange-color
+    &:hover,&:focus
+      color: #fff
+      background: transparent
+      border-color: $theme-orange-color

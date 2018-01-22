@@ -1,0 +1,39 @@
+body
+  font-family: "Frutiger", Helvetica
+  counter-reset: my-sec-counter -1
+
+h1
+  font-family: Frutiger
+  font-weight: bold
+  font-size: rem-calc(48)
+  text-transform: uppercase
+  line-height: 1.2
+
+a
+  color: #fff
+  &:hover
+	  color: $theme-orange-color
+
+.like_h1
+  font-family: Frutiger
+  font-weight: bold
+  font-size: rem-calc(32)
+  text-transform: uppercase
+  line-height: 1.2
+  position: relative
+
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    bottom: rem-calc(-5)
+    height: rem-calc(3)
+    width: rem-calc(100)
+    background: $theme-orange-color
+
+.pr-50
+  padding-right: rem-calc(50) !important
+
+.mb-5
+  margin-bottom: rem-calc(5)
+

@@ -1,0 +1,489 @@
+header.header
+  .top-bar
+    width: 100%
+    background: transparent
+    padding: rem-calc(15 70)
+
+    .top-bar__links
+
+      ul.top-bar__list
+        background: transparent
+        list-style: none
+        margin-bottom: 0
+
+        li
+          display: inline-block
+          padding-left: rem-calc(70)
+
+          &:first-child
+            padding-left: 0
+
+          a:not(.btn-call-modal)
+            color: #fff
+            transition: .7s all
+            font-size: rem-calc($default-font-size)
+
+            &:hover
+              color: $theme-orange-color
+
+          a.btn-call-modal
+            +custom-button()
+
+          a.email,a.telephone
+            position: relative
+
+
+            &:before
+              content: ""
+              position: absolute
+              left: rem-calc(-40)
+              bottom: 0
+              top: 0
+              transition: .7s filter
+              margin: auto
+              height: rem-calc(20)
+              width: rem-calc(30)
+              background: url("../../img/sprite.png") no-repeat
+              background-position: rem-calc(0 -126)
+
+          a.telephone
+
+            &:before
+              height: 1.875rem
+              background-position: rem-calc(-27 -128)
+              width: rem-calc(19)
+
+main.main
+  .main_section__wrapper
+
+    height: 100%
+
+    & > .row
+      height: 100%
+
+    .pre-title
+      margin-bottom: 0
+      font-size: rem-calc(14)
+      color: $theme-grey-color
+      text-transform: uppercase
+
+    .like_h1
+      margin-bottom: rem-calc(30)
+
+    .text
+      font-size: rem-calc(14)
+      color: $theme-grey-color
+
+    .main_section__inner
+      padding: rem-calc(0 70)
+
+  .first_home_section
+    background: url("../../img/home_section/first-screen.png") no-repeat
+    background-size: cover
+
+    .main_section__inner
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-25)
+        width: rem-calc(1060)
+        height: rem-calc(125)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: 0 0
+
+    .pre-title
+      font-size: rem-calc(20)
+      color: $theme-orange-color
+      text-transform: none
+
+    .title
+      margin-bottom: rem-calc(15)
+      position: relative
+
+      &:after
+        content: ""
+        width: 36%
+        height: rem-calc(2)
+        background: #fff
+        position: absolute
+        left: 0
+        bottom: 0
+
+    .text
+      font-size: rem-calc(18)
+      color: #fff
+
+    .links_block
+      margin-top: rem-calc(30)
+
+      a
+        display: inline-block
+        margin-right: rem-calc(90)
+        font-size: rem-calc($default-font-size)
+
+        &:last-child
+          margin-right: 0
+
+      .orange-btn
+        +custom-button(false)
+
+      .btn-dwn
+        position: relative
+
+        &:before
+          content: ""
+          position: absolute
+          left: rem-calc(-30)
+          bottom: 0
+          top: 0
+          margin: auto
+          height: rem-calc(20)
+          width: rem-calc(30)
+          background: url("../../img/sprite.png") no-repeat
+          background-position: rem-calc(0 -145)
+
+  .second_home_section
+    background: url("../../img/home_section/services.png") no-repeat
+    background-size: cover
+
+    .main_section__inner
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-60)
+        width: rem-calc(235)
+        height: rem-calc(155)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: rem-calc(-205 -125)
+
+    .gallery
+
+      .gallery__item
+
+        img.gallery__img
+          filter: brightness(55%)
+          transition: .7s all
+
+        figure
+          position: relative
+          transition: .7s all
+
+          figcaption
+            position: absolute
+            bottom: 0
+            padding: rem-calc(10 25)
+            background: transparent
+            width: 100%
+
+            span
+              display: inline-block
+
+            span.gallery__title
+              font-size: rem-calc(23)
+              color: #fff
+              font-weight: bold
+
+            span.gallery__text
+              display: none
+              font-size: rem-calc(13)
+              color: #ffffff
+              padding: rem-calc(7 0 5)
+
+            a.gallery__link
+              font-style: italic
+              display: none
+              font-size: rem-calc(14)
+
+              &:hover
+                color: #fff
+                text-decoration: underline
+
+          &:hover
+            transform: scale(1.13)
+
+            img.gallery__img
+              filter: none
+
+            figcaption
+              background: $theme-orange-color
+
+            span.gallery__text,a.gallery__link
+              display: block
+
+  .third_home_section
+    background: url("../../img/home_section/portfolio.png") no-repeat
+    background-size: cover
+
+    .main_section__inner
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-100)
+        width: rem-calc(255)
+        height: rem-calc(155)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: rem-calc(-440 -125)
+
+    .text
+
+      b
+        font-size: rem-calc(18)
+        color: #000
+
+      ul.text-list
+        margin: 0
+        margin-left: rem-calc(35)
+        list-style: none
+
+        li
+          position: relative
+
+          &:before
+            content: ''
+            position: absolute
+            left: rem-calc(-10)
+            top: 0
+            bottom: 0
+            margin: auto
+            width: rem-calc(5)
+            height: rem-calc(1)
+            background: #000
+
+          a
+            font-size: rem-calc($default-font-size)
+            font-style: italic
+            color: #000
+
+            &:hover
+              color: $theme-orange-color
+
+    .portfolio
+
+      .portfolio__item
+        position: relative
+
+        &:before
+          content: ""
+          position: absolute
+          top: rem-calc(-40)
+          width: rem-calc(50)
+          height: rem-calc(25)
+          background: url("../../img/sprite.png") no-repeat
+          background-position: rem-calc(-87 -131)
+
+        &:nth-child(2):before
+          background-position: rem-calc(-142 -131)
+
+        &:nth-child(3):before
+          background-position: rem-calc(-87 -158)
+
+        &:nth-child(4):before
+          background-position: rem-calc(-142 -158)
+
+
+
+        .portfolio__img
+          transition: .7s all
+
+        .portfolio__meta
+          padding: rem-calc(0 10)
+
+          .portfolio__cat
+            font-weight: 200
+            display: inline-block
+            font-size: rem-calc(13)
+            color: $theme-grey-color
+            padding: rem-calc(10 0 5)
+
+          .portfolio__title
+            font-size: rem-calc(23)
+            font-weight: bold
+            margin-bottom: rem-calc(5)
+
+          .portfolio__text
+            font-size: rem-calc(13)
+            color: $theme-grey-color
+
+          .portfolio__link
+            color: #000000
+            font-size: rem-calc($default-font-size)
+            font-style: italic
+            &:hover
+              color: $theme-orange-color
+
+        &:hover
+          .portfolio__img
+            filter: grayscale(70%)
+
+  .fourth_home_section
+    background: url("../../img/home_section/about-us.png") no-repeat
+    background-size: cover
+
+    .section__text
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-100)
+        width: rem-calc(255)
+        height: rem-calc(155)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: rem-calc(-710 -125)
+
+    .block_advantages
+
+      .advantages__item
+        position: relative
+
+        &:before
+          content: ""
+          position: absolute
+          left: rem-calc(-55)
+          width: rem-calc(75)
+          height: rem-calc(50)
+          background: url("../../img/sprite.png") no-repeat
+          background-position: rem-calc(0 -275)
+
+        &:nth-child(2):before
+           background-position: rem-calc(-108 -275)
+           width: rem-calc(100)
+
+        &:nth-child(3):before
+          background-position: rem-calc(0 -322)
+          width: rem-calc(100)
+
+        &:nth-child(4):before
+          background-position: rem-calc(-108 -322)
+
+        p
+          font-size: rem-calc($default-font-size)
+          margin-top: rem-calc(25)
+          color: $theme-grey-color
+          padding-left: rem-calc(30)
+
+  .fifth_home_section
+    background: url("../../img/test-section.png") no-repeat
+    background-size: 95%
+    background-position: left center
+
+  .sixth_home_section
+    background: url("../../img/home_section/contacts.png") no-repeat
+    background-size: cover
+
+    .main_section__inner
+      position: relative
+      background: url("../../img/maps.png") no-repeat
+      background-position: left bottom
+      background-size: 40%
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-100)
+        width: rem-calc(255)
+        height: rem-calc(155)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: rem-calc(-470 -285)
+
+    .contacts_item
+      text-align: center
+      font-size: rem-calc($default-font-size)
+      max-width: rem-calc(170)
+      margin-top: rem-calc(85)
+
+    .contacts_item__link
+      color: #000
+      display: block
+      margin-top: 10px
+
+      &:hover
+        color: $theme-orange-color
+
+    .contact_form
+      background-color: #f5f5f5
+      padding: 4rem
+
+      .contact_form__title
+        font-size: rem-calc(23)
+        font-weight: bold
+        line-height: 1.3
+
+      .contact_form__sub-title
+        font-size: rem-calc(14)
+
+
+      .form-container
+
+        input,textarea
+          border: none
+          box-shadow: none
+          border-bottom: rem-calc(1) solid #acacac
+          background: transparent
+          font-size: rem-calc(14)
+          color: $theme-grey-color
+
+          &::placeholder
+            color: #acacac
+
+          &:hover,&:focus
+            border-color: $theme-orange-color
+
+        textarea
+          resize: none
+          max-height: rem-calc(80)
+          margin-bottom: rem-calc(50)
+
+        .contact_form__sumbit
+          +custom-button(false)
+          width: 100%
+
+
+footer.footer
+  .footer__content
+    padding: rem-calc(25 0)
+
+    .footer__inner_row
+      padding: rem-calc(0 70)
+
+    .footer__list
+      list-style: none
+      margin: 0
+
+      li
+        display: inline-block
+        padding-right: rem-calc(25)
+
+    .footer_link
+      text-transform: uppercase
+      font-size: rem-calc($default-font-size)
+      transition: .7s all
+
+body.body-invert
+
+  header.header
+
+    .top-bar__links
+
+      ul.top-bar__list
+
+        li
+
+          a:not(.btn-call-modal)
+            color: #000
+
+          a.btn-call-modal
+            +custom-button(false)
+
+          a.email, a.telephone
+
+            &:before
+              filter: brightness(0%)
+
+  footer.footer
+
+    .footer_link
+      color: #000
+      &:hover
+        color: $theme-orange-color
