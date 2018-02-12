@@ -40,7 +40,7 @@ $this->title = 'My Yii Application';
                                     <?php foreach ($service_categories as $service_category):?>
                                     <div class="large-4 gallery__item columns">
                                         <figure>
-                                            <img src="uploads/<?=$service_category->image?>" alt="card-gallery" class="gallery__img" />
+                                            <img src="/uploads/<?=$service_category->image?>" alt="card-gallery" class="gallery__img" />
                                             <figcaption>
                                                 <span class="gallery__title"><?=$service_category->title?></span>
                                                 <span class="gallery__text"><?=$service_category->description?></span>
@@ -78,7 +78,7 @@ $this->title = 'My Yii Application';
                                 <div class="row">
                                     <?php foreach ($projects as $project):?>
                                     <div class="portfolio__item large-3 medium-4 columns">
-                                        <img src="uploads/<?=$project->image?>" alt="portfolio_img" width="290" height="300" class="portfolio__img" />
+                                        <img src="/uploads/<?=$project->image?>" alt="portfolio_img" width="290" height="300" class="portfolio__img" />
                                         <div class="portfolio__meta">
                                             <i class="portfolio__cat"><?=$project->category?></i>
                                             <p class="portfolio__title"><?=$project->name?></p>
@@ -103,7 +103,7 @@ $this->title = 'My Yii Application';
                     <div class="small-12 main_section__inner align-self-middle columns">
                         <div class="row align-middle">
                             <div class="large-6 columns">
-                                <img src="img/home_section/about_architrav.png" alt="W" />
+                                <img src="/img/home_section/about_architrav.png" alt="W" />
                             </div>
                             <div class="large-6 section__text columns">
                                 <p class="pre-title">О нас</p>
@@ -137,11 +137,11 @@ $this->title = 'My Yii Application';
             <!--<p class="pre-title">Workflow</p>-->
             <!--<p class="like_h1">Схема <br/> сотрудничества</p>-->
             <!--<div class="text" style="text-align: right; padding-right: 10rem;">-->
-            <!--<img src="img/people.png" alt="people" />-->
+            <!--<img src="/img/people.png" alt="people" />-->
             <!--</div>-->
             <!--</div>-->
             <!--<div class="large-6 workflow__img columns">-->
-            <!--<img src="img/workflow.png" alt="workflow" />-->
+            <!--<img src="/img/workflow.png" alt="workflow" />-->
             <!--</div>-->
             <!--</div>-->
             <!--</div>-->
@@ -159,16 +159,16 @@ $this->title = 'My Yii Application';
                             </div>
                             <div class="large-3 columns">
                                 <div class="contacts_item">
-                                    <img src="img/footer/telephone.png" alt="telephone" />
-                                    <a href="#" class="contacts_item__link"><?=$info->phone?></a>
+                                    <img src="/img/footer/telephone.png" alt="telephone" />
+                                    <a href="#" class="contacts_item__link">+38(067) 890-83-35</a>
                                 </div>
                                 <div class="contacts_item large-offset-5">
-                                    <img src="img/footer/email.png" alt="email" />
-                                    <a href="#" class="contacts_item__link"><?=$info->email?></a>
+                                    <img src="/img/footer/email.png" alt="email" />
+                                    <a href="#" class="contacts_item__link">architrav@ukr.net</a>
                                 </div>
                                 <div class="contacts_item">
-                                    <img src="img/footer/maps.png" alt="maps" />
-                                    <a href="#" class="contacts_item__link"><?=$info->address?></a>
+                                    <img src="/img/footer/maps.png" alt="maps" />
+                                    <a href="#" class="contacts_item__link">г. Белгород - Днестровский, улица Шевченко, 40</a>
                                 </div>
                             </div>
                             <div class="large-4 columns">

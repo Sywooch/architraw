@@ -6,12 +6,11 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
-
-$info_header = \app\models\Info\Info::find()->one();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -24,9 +23,8 @@ $info_header = \app\models\Info\Info::find()->one();
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body class="<?php if ($_SERVER['REQUEST_URI']=="/" or $_SERVER['REQUEST_URI']=="/site/index"){echo '';}else {echo 'not-mainPage';}?>">
 <?php $this->beginBody() ?>
-
 <div class="wrapper">
     <div id="offcanvas-full-screen" class="offcanvas-full-screen position-top"  data-off-canvas data-transition="overlap">
         <div class="offcanvas-full-screen__inner">
@@ -34,9 +32,9 @@ $info_header = \app\models\Info\Info::find()->one();
                 <div class="row">
                     <div class="small-12 align-self-middle columns">
                         <ul class="offcanvas-full-screen__menu">
-                            <li><a href="#" class="link">Главная</a></li>
+                            <li><a href="<?= Url::to(['/site/index']) ?>" class="link">Главная</a></li>
                             <li><a href="#" class="link">Услуги</a></li>
-                            <li><a href="#" class="link">Портфолио</a></li>
+                            <li><a href="<?= Url::to(['portfolio/all'])?>" class="link">Портфолио</a></li>
                             <li><a href="#" class="link">О нас</a></li>
                             <li><a href="#" class="link">Как мы работаем</a></li>
                             <li><a href="#" class="link">Блог</a></li>
@@ -55,14 +53,14 @@ $info_header = \app\models\Info\Info::find()->one();
             <div class="top-bar align-justify">
                 <div class="top-bar-left">
                     <div class="top-bar__logo">
-                        <img src="img/header/h_logo.svg" width="110" height="110" alt="Logo">
+                        <img src="/img/header/h_logo.svg" width="110" height="110" alt="Logo">
                     </div>
                 </div>
                 <div class="top-bar-right">
                     <div class="top-bar__links">
                         <ul class="top-bar__list">
-                            <li><a href="#" class="email"><?=$info_header->email?></a></li>
-                            <li><a href="#" class="telephone"><?=$info_header->phone?></a></li>
+                            <li><a href="#" class="email">architrav@ukr.net</a></li>
+                            <li><a href="#" class="telephone">+38 (067) 890-83-35</a></li>
                             <li><a href="#" class="btn-call-modal">Заказать звонок</a></li>
                         </ul>
                     </div>

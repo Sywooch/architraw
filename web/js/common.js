@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-    jQuery(document).foundation();
+    $(document).foundation();
     if (typeof $.fn.fullpage.destroy == 'function') {
         $.fn.fullpage.destroy('all');
     }
@@ -13,6 +13,7 @@ jQuery(document).ready(function ($) {
         verticalCentered: false,
         afterRender: function(){
             set_height_nav_elements($("#fp-nav.left li"));
+            check_navs_item($("#fp-nav.left li"));
             add_btn_to_nav();
         },
         onLeave: function(index, nextIndex, direction){
@@ -34,6 +35,20 @@ jQuery(document).ready(function ($) {
     function add_btn_to_nav() {
         $("#fp-nav").append("<button id='trigger-btn-menu' data-toggle='offcanvas-full-screen'></button>");
     }
+
+    function check_navs_item(elem){
+       if(elem.length <= 1){
+            console.log(elem.remove());
+       }
+    }
+
+    $('.blog-slider-container').slick({
+            infinite: true,
+            slidesToShow: 2,
+            variableWidth: true,
+            prevArrow: "<button class='slider-prev'>Предыдущие</button>",
+            nextArrow: "<button class='slider-next'>Слудующие</button>",
+    });
 
 });
 

@@ -1,8 +1,10 @@
 <?php
 
-use dosamigos\ckeditor\CKEditor;
+use mihaildev\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use mihaildev\elfinder\ElFinder;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Header */
@@ -15,10 +17,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'text')->widget(CKEditor::className(), [
-        'options' => ['rows' => 6],
-        'preset' => 'full'
-    ]) ?>
+    <?=  $form->field($model, 'text')->widget(CKEditor::className(),[
+        'editorOptions' => [
+            'preset' => 'full', //разработанны стандартные настройки basic, standard, full данную возможность не обязательно использовать
+            'inline' => false, //по умолчанию false
+        ],
+    ]); ?>
+
     <?= $form->field($model, 'presentation')->hiddenInput(['maxlength' => true])->label(false) ?>
 
     <div class="form-group">

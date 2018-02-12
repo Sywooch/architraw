@@ -212,7 +212,10 @@ main.main
             span.gallery__text,a.gallery__link
               display: block
 
-  .third_home_section
+  .third_home_section,
+  .first_portfolio_section,
+  .second_portfolio_section,
+  .third_portfolio_section
     background: url("../../img/home_section/portfolio.png") no-repeat
     background-size: cover
 
@@ -440,6 +443,124 @@ main.main
           width: 100%
 
 
+  .first_blog_section
+    background: url("../../img/blog.png") no-repeat
+    background-size: cover
+
+    .main_section__inner
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-60)
+        width: rem-calc(235)
+        height: rem-calc(155)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: rem-calc(-205 -125)
+
+  .blog-slider-container
+    margin-top: rem-calc(30)
+
+    .blog-slider__item
+      margin-right: rem-calc(20)
+
+
+    .blog-slider__img
+      float: left
+      margin-right: rem-calc(35)
+
+      img
+        max-width: rem-calc(280)
+
+    .slick-arrow
+      background: red
+      bottom: rem-calc(-55)
+      top: auto
+      background: none
+      color: rem-calc($theme-grey-color)
+      font-size: rem-calc($default-font-size)
+      position: absolute
+      cursor: pointer
+      text-transform: uppercase
+
+    .slider-prev
+      left: rem-calc(0)
+
+    .slider-next
+      right: rem-calc(20)
+
+
+    .blog-slider__text
+      max-width: rem-calc(300)
+      float: left
+      padding-right: rem-calc(10)
+
+      .title
+        padding-top: rem-calc(25)
+        font-weight: 600
+        font-size: rem-calc(22)
+        line-height: 1.2
+        margin-bottom: rem-calc(10)
+
+      .date
+        font-size: rem-calc(13)
+        color: #6e6e6e
+        font-style: italic
+        font-weight: 200
+
+      .text
+        font-size: rem-calc($default-font-size)
+        color: $theme-grey-color
+        padding-top: rem-calc(10)
+
+      .link
+        color: $theme-grey-color
+        font-style: italic
+        font-size: rem-calc($default-font-size)
+
+  .first_portfolio_section
+
+    .main_section__inner
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-100)
+        width: rem-calc(235)
+        height: rem-calc(155)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: rem-calc(-205 -125)
+
+  .second_portfolio_section
+
+    .main_section__inner
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-100)
+        width: rem-calc(255)
+        height: rem-calc(155)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: rem-calc(-440 -125)
+
+  .third_portfolio_section
+
+    .main_section__inner
+      position: relative
+      &:before
+        content: ""
+        position: absolute
+        top: rem-calc(-100)
+        width: rem-calc(255)
+        height: rem-calc(155)
+        background: url("../../img/sprite.png") no-repeat
+        background-position: rem-calc(-710 -125)
+
+
+
+
+
 footer.footer
   .footer__content
     padding: rem-calc(25 0)
@@ -460,7 +581,7 @@ footer.footer
       font-size: rem-calc($default-font-size)
       transition: .7s all
 
-body.body-invert
+body.body-invert, body.not-mainPage
 
   header.header
 

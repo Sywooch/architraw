@@ -3,8 +3,8 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
-use app\models\CallMe;
-use app\models\CallMeSearch;
+use app\models\CallMe\CallMe;
+use app\models\CallMe\CallMeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

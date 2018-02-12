@@ -1,8 +1,9 @@
 <?php
 
-use dosamigos\ckeditor\CKEditor;
+use mihaildev\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use mihaildev\elfinder\ElFinder;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Service */
@@ -16,9 +17,9 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'text')->widget(CKEditor::className(), [
-        'options' => ['rows' => 6],
-        'preset' => 'full'
-    ]) ?>
+        'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
+        ]);
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

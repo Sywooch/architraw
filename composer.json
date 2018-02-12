@@ -21,6 +21,8 @@
         "2amigos/yii2-ckeditor-widget": "^2.1",
         "dmstr/yii2-adminlte-asset": "^2.1",
         "kartik-v/yii2-widget-fileinput": "@dev",
+        "mihaildev/yii2-elfinder": "*",
+        "mihaildev/yii2-ckeditor": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

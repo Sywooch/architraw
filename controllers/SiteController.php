@@ -5,7 +5,6 @@ namespace app\controllers;
 use app\models\About\About;
 use app\models\CallMe\CallMe;
 use app\models\Header\Header;
-use app\models\Info\Info;
 use app\models\Portfolio\Project;
 use app\models\Portfolio\Projects;
 use app\models\Service\Service;
@@ -73,21 +72,20 @@ class SiteController extends Controller
         $service =Service::find()->one();
         $service_categories = ServiceCategory::find()->all();
         $project = Project::find()->one();
-        $projects = Projects::find()->all();
+        $projects = Projects::find()->limit(4)->all();
         $about = About::find()->one();
-        $info = Info::find()->one();
         $model = new CallMe();
-        //$quickorder = new CallMe();
-       // mail('alexskoromnui96@yandex.com', 'Fast call', 'Please call me');
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-//            mail('alexskoromnui96@yandex.com', 'Fast call', 'Please call me');
+        $quickorder = new CallMe();
+        mail('alexskoromnui96@yandex.com', 'Fast call', 'Please call me');
+        if ($quickorder->load(Yii::$app->request->post()) && $quickorder->save()) {
+            mail('alexskoromnui96@yandex.com', 'Fast call', 'Please call me');
 //            Yii::$app->mailer->compose('phone', ['quickorder' => $quickorder])
 //                ->setFrom('alexskoromnui96@yandex.com')
 //                ->setTo('alexskoromnui@gmail.com')
 //                ->setSubject('Быстрый заказ')
 //                ->send();
 
-            return $this->refresh();
+            //return $this->refresh();
         }
 
 
@@ -98,8 +96,7 @@ class SiteController extends Controller
             'project' => $project,
             'projects' => $projects,
             'about' => $about,
-            'model' => $model,
-            'info' => $info
+            'model' => $model
         ]);
     }
 

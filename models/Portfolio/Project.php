@@ -42,4 +42,5 @@ class Project extends \yii\db\ActiveRecord
             'text' => 'Описание',
         ];
     }
+   
 }

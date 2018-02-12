@@ -24,55 +24,61 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Админ панель', 'options' => ['class' => 'header']],
-
                     [
                         'label' => 'Главная',
                         'url' => ['#'],
                         'items' => [
-                            [
-                                'label' => 'Презентация',
-                                'url' => ['/admin/header/upload'],
 
-                            ],
-                            [
-                                'label' => 'Текст',
-                                'url' => ['/admin/header/index'],
+                                [
+                                    'label' => 'Главная',
+                                    'url' => ['#'],
+                                    'items' => [
+                                        [
+                                            'label' => 'Презентация',
+                                            'url' => ['/admin/header/upload'],
 
-                            ],]
-                    ],
-                    [
-                        'label' => 'Услуги',
-                        'url' => ['#'],
-                        'items' => [
-                            [
-                                'label' => 'Текст',
-                                'url' => ['/admin/service/index'],
+                                        ],
+                                        [
+                                            'label' => 'Текст',
+                                            'url' => ['/admin/header/index'],
 
-                            ],
-                            [
-                                'label' => 'Категории',
-                                'url' => ['/admin/category/index'],
+                                        ],]
+                                ],
+                                [
+                                    'label' => 'Услуги',
+                                    'url' => ['#'],
+                                    'items' => [
+                                        [
+                                            'label' => 'Текст',
+                                            'url' => ['/admin/service/index'],
 
-                            ],]
-                    ],
-                    [
-                        'label' => 'Портфолио',
-                        'url' => ['#'],
-                        'items' => [
-                            [
-                                'label' => 'Текст',
-                                'url' => ['/admin/project/index'],
+                                        ],
+                                        [
+                                            'label' => 'Категории',
+                                            'url' => ['/admin/category/index'],
 
-                            ],
-                            [
-                                'label' => 'Проекты',
-                                'url' => ['/admin/projects/index'],
+                                        ],]
+                                ],
+                                [
+                                    'label' => 'Портфолио',
+                                    'url' => ['#'],
+                                    'items' => [
+                                        [
+                                            'label' => 'Текст',
+                                            'url' => ['/admin/project/index'],
 
-                            ],]
-                    ],
-                    ['label' => 'О нас', 'url' => ['/admin/about/index'],],
-                    ['label' => 'Заказ обратного звонка', 'url' => ['/admin/callme/index'],],
-                    ['label' => 'Информация о компании', 'url' => ['/admin/info/index'],],
+                                        ],
+                                        [
+                                            'label' => 'Проекты',
+                                            'url' => ['/admin/projects/index'],
+
+                                        ],]
+                                ],
+                                ['label' => 'О нас', 'url' => ['/admin/about/index'],],
+                                ['label' => 'Заказ обратного звонка', 'url' => ['/admin/callme/index'],],
+                            ]
+                        ],
+                    ['label' => 'Блог', 'url' => ['/admin/blog/index'],],
                 ],
             ]
         ) ?>

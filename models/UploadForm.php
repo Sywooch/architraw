@@ -1,6 +1,9 @@
 <?php
 namespace app\models;
 
+use app\models\Header\Header;
+use app\models\Portfolio\Projects;
+use app\models\Service\ServiceCategory;
 use yii\base\Model;
 use yii\web\UploadedFile;
 

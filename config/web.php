@@ -13,6 +13,17 @@ $config = [
             'layout' => 'main'
         ],
     ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+                'access' => ['?'],
+                'root' => [
+                    'path' => 'images',
+                    'name' => 'Files'
+                ],
+            ]
+        ],
+
     'components' => [
         'request' => [
             'baseUrl'=> '',

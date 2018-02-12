@@ -113,11 +113,15 @@ body.body-invert
             font-weight: normal
             padding-right: rem-calc(5)
 
-body.body-invert
+body.body-invert, body.not-mainPage
 
   #fp-nav.left
+    counter-reset: my-sec-counter
 
     #trigger-btn-menu
       filter: brightness(0)
+
+    ul
+      background: #ebebeb
 
 

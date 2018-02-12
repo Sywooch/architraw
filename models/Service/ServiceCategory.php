@@ -2,6 +2,7 @@
 
 namespace app\models\Service;
 
+use app\models\Portfolio\Projects;
 use Yii;
 use yii\helpers\ArrayHelper;
 
@@ -49,4 +50,9 @@ class ServiceCategory extends \yii\db\ActiveRecord
     {
         return ($this->image) ? '/uploads/' . $this->image : '/no-image.png';
     }
+    public function getProjects()
+    {
+        return $this->hasMany(Projects::className(),['category' => 'title']);
+    }
+
 }
